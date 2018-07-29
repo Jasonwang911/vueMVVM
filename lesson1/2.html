@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {};
+        Object.defineProperty( obj, 'name', {
+            configurable: true,
+            enumerable: true,
+            get() {  
+                //获取obj.name的值的时候回调用 Object.defineProperty的get方法 
+                return 'langming';
+            },
+            set(val) {
+                // 给obj.name赋值的时候会调用 Object.definProperty的 set方法
+                console.log(val)
+            }
+        })
+
+        console.log(obj)
+    </script>
+</body>
+</html>

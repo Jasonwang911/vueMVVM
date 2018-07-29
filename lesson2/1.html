@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{a}}
+    </div>
+    <script src="1.js"></script>
+    <script>
+    // 数据劫持 Observe
+       let vue = new Vue({
+           el: 'app',
+           data: {
+               a: 1,
+           }
+       });
+    </script>
+</body>
+</html>

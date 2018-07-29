@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj = {};
+        Object.defineProperty( obj, 'name', {
+            configurable: true,       // 可配置，可删除
+            writable: true,           // 可重写
+            enumerable: true,         // 可枚举
+            value: 'langkui'
+        })
+        // delete obj.name;
+        // obj.name = 'xiaoming';
+        for(let name in obj) {
+            console.log(name)
+        }
+        console.log(obj)
+    </script>
+</body>
+</html>
