@@ -39,6 +39,7 @@ function Compile(el, vm) {
             let reg = /\{\{(.*)\}\}/;
             // 当前节点是文本节点并且通过{{}}的正则匹配
             if(node.nodeType === 3 && reg.test(text)) {
+                // RegExp $1-$9 表示 最后使用的9个正则
                 console.log(RegExp.$1);  // a.a b
                 let arr = RegExp.$1.split('.');   // [a,a] [b]
                 let val = vm;
